@@ -29,6 +29,16 @@
 - 프레임 별로 나눠 위험도 단계를 3개로 Labeling하여 사용
 - Dataset에서 랜덤하게 10 프레임을 뽑아 전처리를 통해 학습과 검증에 사용
 
+### Architectures
+- 모델은 3D-Resnet 기반으로한 3D-CNN을 사용함
+    - 3D Convloution를 이용하여 공간 정보와 프레이 간의 시간적 연결을 연산하여 특징을 추출
+    - Resnet-34를 기반으로 3D-Resnet을 구성함
+    - Kinetics 데이터로 사전 학습된 딥 러닝 모델로 전이 학습하여 성능을 향상 시켰음
+- 입력으로는 224x224 사이즈로 된 10 프레임의 RGB 영상을 입력으로 사용
+- 결과로는 각 클래스에 대한 수치가 나오고 제일 수치가 높은 클래스를 위험도로 사용함
+![pic_1](https://user-images.githubusercontent.com/34120950/148449425-641fea03-ec8b-4532-94f7-c34957565157.png)
+
+
 # Guide   
   * ## Train
    
@@ -39,7 +49,7 @@
       !python -u .\video_test.py --n_classes 3 --batch_size 1 --sample_size 224 --model {model_path} --testdata {data_path} --visuable {bool} --video_name {video_name}
   
      
-  * ## Test Result 
+  * ## Test Result
   　　　 ![Test_Result_1](https://user-images.githubusercontent.com/34120950/148389164-f04d34d9-3795-4208-b44d-c0b64e3f92f9.gif)
  
 
