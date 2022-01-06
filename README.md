@@ -2,7 +2,7 @@
 
 # TEAM : SoGOOD
 ![SoGOOD](https://user-images.githubusercontent.com/34120950/148390331-6f4c18be-c0ce-4a91-93c4-5cdedfc81945.png)   
-* 선한 운전력 전파를 위해!
+* 선한 운전력 전파를 위한 작은 발자국!
 
 ## Project : SoGOOD   
   * 딥 러닝 기반 운전 위험도를 평가하여 안전한 운전을 유도하여 사고 방지에 기여하는 것이 목표
@@ -35,7 +35,7 @@
     - Resnet-34를 기반으로 3D-Resnet을 구성함
     - Kinetics 데이터로 사전 학습된 딥 러닝 모델로 전이 학습하여 성능을 향상 시켰음
 - 입력으로는 224x224 사이즈로 된 10 프레임의 RGB 영상을 입력으로 사용
-- 결과로는 각 클래스에 대한 수치가 나오고 제일 수치가 높은 클래스를 위험도로 사용함
+- 결과로는 각 클래스에 대한 수치가 나오고 제일 수치가 높은 클래스를 위험도로 사용함   
 ![pic_1](https://user-images.githubusercontent.com/34120950/148449839-c803df6b-7e32-4207-b5fb-ad5ba763d2ae.png)
 
 # Guide   
