@@ -36,7 +36,7 @@
     - Kinetics 데이터로 사전 학습된 딥 러닝 모델로 전이 학습하여 성능을 향상 시켰음
 - 입력으로는 224x224 사이즈로 된 10 프레임의 RGB 영상을 입력으로 사용
 - 결과로는 각 클래스에 대한 수치가 나오고 제일 수치가 높은 클래스를 위험도로 사용함
-![pic_1](https://user-images.githubusercontent.com/34120950/148449655-58a557b7-67ca-4ed0-8951-774c24a920b6.png)
+![pic_1](https://user-images.githubusercontent.com/34120950/148449839-c803df6b-7e32-4207-b5fb-ad5ba763d2ae.png)
 
 # Guide   
   * ## Train
