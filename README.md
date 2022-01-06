@@ -22,6 +22,13 @@
 - 본 프로젝트는 하인리히 법칙을 역이용하여 사고로 이어지는 운전 패턴과 상황을 학습한 딥 러닝으로 사용자에게 알려주어 위험도 높은 운전 빈도를 낮춰 사고 방지에 기여하는 것이 목표
 - 사고가 날 수도 있는 혹은 사고가 난 블랙박스 영상을 학습으로하여 위험도를 Normal, Waring, Danger로 사용자에게 경고할 수 있도록 함      
 
+### Dataset   
+- DoTA(Detection of Traffic Anomaly) Dataset을 이용
+    - 해당 데이터는 정상적이지 않은 교통 상황 영상이 4,667개 포함되어 있음
+- DoTA 데이터 중에서 발생하는 블랙박스 영상 약 2,000개 이상에서 200,000장이 넘는 프레임을 학습과 검증 및 테스트에 사용
+- 프레임 별로 나눠 위험도 단계를 3개로 Labeling하여 사용
+- Dataset에서 랜덤하게 10 프레임을 뽑아 전처리를 통해 학습과 검증에 사용
+
 # Guide   
   * ## Train
    
@@ -32,5 +39,8 @@
       !python -u .\video_test.py --n_classes 3 --batch_size 1 --sample_size 224 --model {model_path} --testdata {data_path} --visuable {bool} --video_name {video_name}
   
      
-  * ## Test Result   
+  * ## Test Result
+  <p align="center"> 
    ![Test_Result_1](https://user-images.githubusercontent.com/34120950/148389164-f04d34d9-3795-4208-b44d-c0b64e3f92f9.gif)
+  </p>
+
