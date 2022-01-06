@@ -1,9 +1,8 @@
 # [멋사x쏘카]해커톤
 
-![SoGOOD](https://user-images.githubusercontent.com/34120950/148390331-6f4c18be-c0ce-4a91-93c4-5cdedfc81945.png)
-
 # TEAM : SoGOOD
-  * 선한 운전력 전파를 위해!
+![SoGOOD](https://user-images.githubusercontent.com/34120950/148390331-6f4c18be-c0ce-4a91-93c4-5cdedfc81945.png)
+* 선한 운전력 전파를 위해!
 
 ## Project : SoGOOD
   * 딥 러닝 기반 운전 위험도를 평가하여 안전한 운전을 유도하여 사고 방지에 기여하는 것이 목표
