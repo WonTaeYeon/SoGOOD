@@ -15,11 +15,20 @@
   - 원태연 - 리더
   - 장주찬
 
+### Introduction   
+- 허버트 윌리엄 하인리히는 <산업재해 예방 : 과학적 접근>이라는 책에서 1명의 사망 사고 있기전에 동일한 원인의 부상 사고 29건, 경미하거나 사고가 일어날뻔한 경우가 300건 있다고 통계학적인 상관관계를 밝혀냄
+- 하인리히 법칙과 유사하게 우리나라 교통 관련 연구원에서 발표한 자료에서도 교통사고로 인한 사망 사고 1회가 일어나기전에 30~40회 정도 가벼운 사고가 있었고, 약 300건 이상의 교통 법규 위반 사례가 적발되었다고 함
+- 즉, 유사한 교통 법규 위반 사례가 많아 질 수록 경미한 사고부터 대형 사고가 발생하는 횟수도 늘어날 확률이 높음
+- 본 프로젝트는 하인리히 법칙을 역이용하여 사고로 이어지는 운전 패턴과 상황을 학습한 딥 러닝으로 사용자에게 알려주어 위험도 높은 운전 빈도를 낮춰 사고 방지에 기여하는 것이 목표
+- 사고가 날 수도 있는 혹은 사고가 난 블랙박스 영상을 학습으로하여 위험도를 Normal, Waring, Danger로 사용자에게 경고할 수 있도록 함      
+
 # Guide   
-  * ## Train   
+  * ## Train
+   
       !python -u train.py --train_list {train path} --val_list {test_path} --n_classes 3 --batch_size 1 --sample_size 224 --lr 0.001 --epochs {epoch}
      
   * ## Test
+   
       !python -u .\video_test.py --n_classes 3 --batch_size 1 --sample_size 224 --model {model_path} --testdata {data_path} --visuable {bool} --video_name {video_name}
   
      
