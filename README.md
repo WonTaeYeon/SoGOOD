@@ -1,6 +1,8 @@
-# SoGOOD
-
 # [멋사x쏘카]해커톤
+
+![SoGOOD](https://user-images.githubusercontent.com/34120950/148390331-6f4c18be-c0ce-4a91-93c4-5cdedfc81945.png)
+
+# SoGOOD
 
 ## Project : SoGOOD
 
