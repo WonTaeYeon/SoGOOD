@@ -29,7 +29,8 @@ def load_imgs(img):
 def eval_drive(videos, model):
     inputs = torch.stack(videos, 0).permute(1, 0, 2, 3)
     model.eval()
-    inputs =  Variable(inputs, volatile=True)
+    with torch.no_grad():
+        inputs =  Variable(inputs)
     outputs = model(inputs.unsqueeze(dim=0))
     _, top = torch.topk(outputs, 1, dim=1)
     return np.squeeze(top.cpu().numpy())

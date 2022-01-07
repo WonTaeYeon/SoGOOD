@@ -24,7 +24,7 @@ def parse_opts():
     parser.add_argument('--momentum', default=0.9, type=float, metavar='M')
     parser.add_argument('--weight-decay', '--wd', default=1e-5, type=float, metavar='W')
 
-    parser.add_argument('--model_depth', default=34, type=int, help='Depth of resnet (10 | 18 | 34 | 50 | 101)')
+    parser.add_argument('--model_depth', default=101, type=int, help='Depth of resnet (10 | 18 | 34 | 50 | 101)')
     parser.add_argument('--resnet_shortcut', default='A', type=str, help='Shortcut type of resnet (A | B)')
     parser.add_argument('--wide_resnet_k', default=2, type=int, help='Wide resnet k')
     parser.add_argument('--resnext_cardinality', default=32, type=int, help='ResNeXt cardinality')

@@ -64,8 +64,9 @@ def validate(val_loader, model, criterion):
     end = time.time()
     for i, (input, target, _) in enumerate(val_loader):
         target = target.cuda()
-        input_var = torch.autograd.Variable(input, volatile=True)
-        target_var = torch.autograd.Variable(target, volatile=True)
+        with torch.no_grad():
+            input_var = torch.autograd.Variable(input)
+            target_var = torch.autograd.Variable(target)
         output = model(input_var)
         loss = criterion(output, target_var)
         prec1, prec3 = accuracy(output.data, target, topk=(1,3))
@@ -140,9 +141,7 @@ if __name__ == '__main__':
         if os.path.isfile(opt.resume):
             print('loading model {}'.format(opt.resume))
             model_data = torch.load(opt.resume)
-            opt.start_epoch = model_data['epoch']
-            best_prec1 = model_data['best_prec1']
-            model.load_state_dict(model_data['state_dict'])
+            model.load_state_dict(model_data, strict=False)
         else:
             assert False,("=> no checkpoint found at '{}'".format(opt.resume))
 
