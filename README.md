@@ -32,7 +32,7 @@
 ### Architectures
 - 모델은 3D-Resnet 기반으로한 3D-CNN을 사용함
     - 3D Convloution를 이용하여 공간 정보와 프레이 간의 시간적 연결을 연산하여 특징을 추출
-    - Resnet-34를 기반으로 3D-Resnet을 구성함
+    - Resnet-101을 기반으로 3D-Resnet을 구성함
     - Kinetics 데이터로 사전 학습된 딥 러닝 모델로 전이 학습하여 성능을 향상 시켰음
 - 입력으로는 224x224 사이즈로 된 10 프레임의 RGB 영상을 입력으로 사용
 - 결과로는 각 클래스에 대한 수치가 나오고 제일 수치가 높은 클래스를 위험도로 사용함   
@@ -51,5 +51,9 @@
      
   * ## Test Result
   　　　 ![Test_Result_1](https://user-images.githubusercontent.com/34120950/148389164-f04d34d9-3795-4208-b44d-c0b64e3f92f9.gif)
- 
+
+# References 
+1. KATAOKA, Hirokatsu, et al. Would mega-scale datasets further enhance spatiotemporal 3D CNNs?. arXiv preprint arXiv:2004.04968, 2020.   
+2. HARA, Kensho; KATAOKA, Hirokatsu; SATOH, Yutaka. Can spatiotemporal 3d cnns retrace the history of 2d cnns and imagenet?. In: Proceedings of the IEEE conference on Computer Vision and Pattern Recognition. 2018. p. 6546-6555.   
+3. YAO, Yu, et al. Unsupervised traffic accident detection in first-person videos. In: 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS). IEEE, 2019. p. 273-280.   
 
