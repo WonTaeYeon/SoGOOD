@@ -389,27 +389,35 @@
 |  Non-trainable params: |0|
 
  </div>
-   </details>
-
+   </details>    
+   
+        
 ### Result   
 
   1. Best 모델은 batch size 4로 200 epoch 학습한 모델
   2. 딥 러닝으로 학습을 통해 학습 시 사용하지 않은 검증 데이터에서 약 70%에 달하는 성능을 보임
   3. 테스트를 통해서 연속된 영상에서도 위험도를 알려줄 수 있음을 확인함
 
-
+   
 # Guide   
   * ## Quick install dependencies   
-    !pip install -r requirements.txt
+    
+    ```
+    pip install -r requirements.txt
+    ```
 
   * ## Train
    
-    !python -u train.py --train_list {train path} --val_list {test_path} --n_classes 3 --batch_size {batch_size} --sample_size 224 --lr 0.001 --epochs {epoch} --resume {pretrained_model_path} --snapshot_pref {saved_model_path}
-     
+    ```   
+    python -u train.py --train_list {train path} --val_list {test_path} --n_classes 3 --batch_size {batch_size} --sample_size 224 --lr 0.001 --epochs {epoch} --resume {pretrained_model_path} --snapshot_pref {saved_model_path}
+    ``` 
+
   * ## Test
    
-    !python -u .\video_test.py --n_classes 3 --batch_size 1 --sample_size 224 --model {model_path} --testdata {data_path} --visuable {bool} --video_name {video_name}
-      
+    ```
+    python -u .\video_test.py --n_classes 3 --batch_size 1 --sample_size 224 --model {model_path} --testdata {data_path} --visuable {bool} --video_name {video_name}
+    ```   
+
   * ## Test Result
   　　　 ![Test_Result_1](https://user-images.githubusercontent.com/34120950/148389164-f04d34d9-3795-4208-b44d-c0b64e3f92f9.gif)
 
