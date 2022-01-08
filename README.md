@@ -730,6 +730,9 @@
    </details>
 
 # Guide   
+  * ## Quick install dependencies   
+    ''' pip install -r requirements.txt ```
+
   * ## Train
    
     !python -u train.py --train_list {train path} --val_list {test_path} --n_classes 3 --batch_size {batch_size} --sample_size 224 --lr 0.001 --epochs {epoch} --resume {pretrained_model_path} --snapshot_pref {saved_model_path}
