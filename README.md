@@ -44,7 +44,7 @@
    <summary>모델 구조 자세히 보기(클릭)</summary>
    <div markdown="1">   
       
-    | Layer (type) |              Output Shape |        Param #|
+| Layer (type) |              Output Shape |        Param #|
 |:---|:---:|---:|
 |            Conv3d-1      |[1, 64, 10, 112, 112]|          65,856|
 |       BatchNorm3d-2      |[1, 64, 10, 112, 112]|             128|
