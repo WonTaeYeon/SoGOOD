@@ -28,6 +28,8 @@
 - DoTA 데이터 중에서 발생하는 블랙박스 영상 약 300개 이상에서 3,000장이 넘는 프레임을 학습과 검증 및 테스트에 사용
 - 프레임 별로 나눠 위험도 단계를 3개로 Labeling하여 사용
 - Dataset에서 랜덤하게 10 프레임을 뽑아 전처리를 통해 학습과 검증에 사용
+- [Label Download](https://drive.google.com/uc?export=download&id=10Ouw21vsdNEWB8eMOzmoFM4f63XTNz6x)
+- [Dataset Download](https://drive.google.com/uc?export=download&id=10TTGd-dGOmHz-SnQG5rSA5-5OD6dfi1d)
 
 ### Architectures
 - 모델은 3D-Resnet 기반으로한 3D-CNN을 사용함
