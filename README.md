@@ -383,9 +383,6 @@
 |       AvgPool3d-335         |[1, 2048, 1, 1, 1]|               0|
 |          Linear-336                     |[1, 3]|           6,147|
 |          ResNet-337                     |[1, 3]|               0|
-|  Total params: |82,474,691|
-|  Trainable params: |82,474,691|
-|  Non-trainable params: |0|
 
  </div>
    </details>
