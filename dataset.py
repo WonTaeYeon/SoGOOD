@@ -64,7 +64,7 @@ def make_dataset(video_listfile, sample_duration, n_samples_for_each_video):
             'label': int(label)
         }
         if n_samples_for_each_video == 1:
-            sample['frame_indices'] = list(range(1, n_frames + 1))
+            sample['frame_indices'] = list(range(1, n_frames - 1))
             dataset.append(sample)
         else:
             if n_samples_for_each_video > 1:
@@ -74,7 +74,7 @@ def make_dataset(video_listfile, sample_duration, n_samples_for_each_video):
                 step = sample_duration
             for i in range(1, n_frames, step):
                 sample_i = copy.deepcopy(sample)
-                sample_i['frame_indices'] = list(range(i, min(n_frames, i + sample_duration)))
+                sample_i['frame_indices'] = list(range(i, min(n_frames-1, i + sample_duration)))
                 dataset.append(sample_i)
     return dataset
 
