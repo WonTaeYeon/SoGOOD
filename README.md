@@ -397,7 +397,7 @@
   
   #### 결과  
 
-  1. 딥 러닝으로 학습을 통해 학습 시 사용하지 않은 검증 데이터에서 약 69%에 달하는 성능을 보임
+  1. 딥 러닝으로 학습을 통해 학습 시 사용하지 않은 검증 데이터에서 약 66%에 달하는 성능을 보임
   2. 테스트를 통해서 연속된 영상에서도 위험도를 알려줄 수 있음을 확인함
 
   #### 기대효과  
@@ -425,7 +425,7 @@
     ```   
 
   * ## Test Result
-  　　　 ![Test_Result_1](https://user-images.githubusercontent.com/34120950/148389164-f04d34d9-3795-4208-b44d-c0b64e3f92f9.gif)
+  　　　 ![Test_Result](https://user-images.githubusercontent.com/34120950/148645456-d122e5c2-7b6f-4b78-8d2c-e462d4959d21.gif)
 
 # References 
 1. KATAOKA, Hirokatsu, et al. Would mega-scale datasets further enhance spatiotemporal 3D CNNs?. arXiv preprint arXiv:2004.04968, 2020.   
