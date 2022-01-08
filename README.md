@@ -398,7 +398,9 @@
   #### 결과  
 
   1. 딥 러닝으로 학습을 통해 학습 시 사용하지 않은 검증 데이터에서 약 66%에 달하는 성능을 보임
-  2. 테스트를 통해서 연속된 영상에서도 위험도를 알려줄 수 있음을 확인함
+  2. 테스트를 통해서 연속된 영상에서도 위험도를 알려줄 수 있음을 확인함  
+  
+  - [Model Download](https://drive.google.com/uc?export=download&id=1qiJ4RwOIegiL45t8wqyT8F5UbR2rQnaL)
 
   #### 기대효과  
 
@@ -417,7 +419,8 @@
     ```   
     python -u train.py --train_list {train path} --val_list {test_path} --n_classes 3 --batch_size {batch_size} --sample_size 224 --lr 0.001 --epochs {epoch} --resume {pretrained_model_path} --snapshot_pref {saved_model_path}
     ``` 
-
+  
+  
   * ## Test
    
     ```
