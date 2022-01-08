@@ -30,7 +30,7 @@ def accuracy(output, target, topk=(1,)):
     correct = pred.eq(target.view(1, -1).expand_as(pred))
     res = []
     for k in topk:
-        correct_k = correct[:k].view(-1).float().sum(0)
+        correct_k = correct[:k].reshape(-1).float().sum(0)
         res.append(correct_k.mul_(100.0 / batch_size))
     return res
 
@@ -49,11 +49,12 @@ def save_checkpoint(state, is_best, snapshot_pref, filename='checkpoint.pth.tar'
     dirname = os.path.join('model', snapshot_pref)
     if not os.path.exists(dirname):
         os.mkdir(dirname)
-    filename = '_'.join((snapshot_pref, str(state['epoch']), filename))
-    filename = os.path.join(dirname, filename)
-    torch.save(state, filename)
-    # if is_best:
-    #     best_name = '_'.join((snapshot_pref, 'model_best', str(state['epoch']),str(state['best_prec1']) + '.pth.tar'))
-    #     best_name = os.path.join('model', snapshot_pref, best_name)
-    #     shutil.copyfile(filename, best_name)
-
+    if state['epoch'] % 10 == 0:
+        filename = '_'.join((snapshot_pref, str(state['epoch']), filename))
+        filename = os.path.join(dirname, filename)
+        torch.save(state, filename)
+    if is_best:
+        best_name = '_'.join((snapshot_pref, 'model_best', str(state['epoch']) + '.pth.tar'))
+        best_name = os.path.join('model', snapshot_pref, best_name)
+        print("BEST : " + best_name)
+        torch.save(state, best_name)
