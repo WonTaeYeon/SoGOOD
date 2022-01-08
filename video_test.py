@@ -38,7 +38,7 @@ def eval_drive(videos, model):
 def take_img(img, top, opt):
     v_img = cv2.imread(img)
     
-    text = ["Normal", "Waring", "Danger"]
+    text = ["Normal", "Warning", "Danger"]
     color = [(0,255,0), (255, 0, 0), (0, 0, 255)]
     
     cv2.putText(v_img, text[top], (10,30), cv2.FONT_HERSHEY_COMPLEX, 1, color[top], 2)
